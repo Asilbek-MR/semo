@@ -5,10 +5,10 @@ ganache_url = "http://127.0.0.1:7545"
 w3 = Web3(Web3.HTTPProvider(ganache_url))
 
 
-from_address="0x9563D4931Ec8237D836CAe33D5b7371bBf7Ab447"
-to_address="0x55b07d70f972aEFE09d100147a9888B46f535367"
-private_key="847910696758155ede69b80c5c779e1ca9470d3f18cdfe54c9c316c6c24b8ede"
-amount_ether=99.16
+from_address="0x55b07d70f972aEFE09d100147a9888B46f535367"
+to_address="0x9563D4931Ec8237D836CAe33D5b7371bBf7Ab447"
+private_key="e58c2d65e064d33ae060b5ad789d4b4b7e8b5a85e058fb1784190595273967fa"
+amount_ether=0.01
 
 def send_ethereum(from_address, to_address, private_key, amount_ether):
     # Yuboruvchi manzilni tekshirish
@@ -31,7 +31,7 @@ def send_ethereum(from_address, to_address, private_key, amount_ether):
     transaction = {
         'to': to_address,
         'value': amount_wei,
-        'gas': 21000,
+        'gas': 30000,
         'gasPrice': w3.to_wei('50', 'gwei'),  # O'zgartirishingiz mumkin
         'nonce': nonce,
     }
